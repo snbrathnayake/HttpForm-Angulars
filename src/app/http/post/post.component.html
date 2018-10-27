@@ -1,0 +1,33 @@
+<div class="post-section">
+
+  <input
+      (keyup.enter)="createPost(title)"
+      #title
+      type="text" 
+      class="form-control"> 
+
+  <ul class="list-group">
+    <li 
+      *ngFor="let post of posts" 
+      class="list-group-item">
+      {{ post.id }}. &nbsp;
+      <button 
+        (click)="deletePost(post)" 
+        class="btn btn-danger btn-sm">
+        Delete
+      </button>
+      {{ post.title }} <br/>
+      <small class="post-body-desc">
+        {{ post.body }}
+      </small>
+      <span class="span-block">
+        <button (click)="updatePost(post)" 
+        class="btn btn-success btn-sm">
+        Update
+        </button> 
+      </span>
+    </li>
+  
+  </ul>
+
+</div>

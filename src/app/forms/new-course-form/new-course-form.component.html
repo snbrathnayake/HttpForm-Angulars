@@ -1,0 +1,23 @@
+<!-- 
+<form>
+  <input 
+      type="text" class="form-control"
+      (keyup.enter)="addTopic(topic)" #topic>
+
+       <ul class="list-group">
+         <li *ngFor="let topic of topics.controls" 
+          (click)="removeTopic(topic)"
+          class="list-group-item">
+          {{ topic.value }}
+         </li>
+      </ul>
+</form> -->
+<input [formControl]="control" placeholder="First">
+
+<!-- <form [formGroup]="userForm" (ngSubmit)="saveUser()">
+  <label for="name">Name</label>
+  <input formControlName="name" #name />
+  <div [hidden]="name.valid">Required</div>
+
+  <button type="submit" [disabled]="!userForm.valid">Submit</button>
+</form> -->
